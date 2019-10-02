@@ -106,3 +106,6 @@ venv.bak/
 # temporary files for QMEE coursework
 *~
 *.tmp
+
+# ATP Vim LaTeX files
+*.project.vim
