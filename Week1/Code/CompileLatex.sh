@@ -1,10 +1,11 @@
 #!/bin/bash
-pdflatex $1.tex
-pdflatex $1.tex
-bibtex $1
-pdflatex $1.tex
-pdflatex $1.tex
-evince $1.pdf &
+BASENAME=$(basename "$1" .tex)
+pdflatex $BASENAME.tex
+pdflatex $BASENAME.tex
+bibtex $BASENAME
+pdflatex $BASENAME.tex
+pdflatex $BASENAME.tex
+evince $BASENAME.pdf &
 
 ## Cleanup
 rm *~
